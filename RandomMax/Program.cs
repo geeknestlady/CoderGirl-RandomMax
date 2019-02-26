@@ -17,23 +17,26 @@ namespace RandomMax
                 randomInt = new Random().Next(0, 1000);
                 //Console.WriteLine(i);
                 //Console.WriteLine(randomInt);
-                randomNums = new int[] { randomInt };
-                int maxValue = randomNums[0];
-                for (int j = 0; j < randomNums.Length; j++)
+                randomNums[i] = randomInt;
+                
+                
+            }
+            int maxValue = randomNums[0];
+            for (int j = 0; j < randomNums.Length; j++)
                 {
                     if (maxValue < randomNums[j])
                     {
-                        maxValue = j;
-                        Console.WriteLine(j);
+                        maxValue = randomNums[j];
+                       // Console.WriteLine(j);
                     }
-
+               // Console.WriteLine("MaxValue Not found");
 
                 }
 
 
-            }                             
-                          
-            
+
+
+            Console.WriteLine(maxValue);
             Console.ReadLine();
         }
     }
